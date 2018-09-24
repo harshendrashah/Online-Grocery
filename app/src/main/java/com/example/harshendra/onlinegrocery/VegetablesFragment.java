@@ -43,11 +43,11 @@ public class VegetablesFragment extends Fragment {
     private ArrayList getData() {
 
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("Potatoes", R.drawable.potatos, "20", "1"));
-        items.add(new Item("Capsicum", R.drawable.capsicum, "40", "1"));
-        items.add(new Item("Aubergines", R.drawable.brinjal, "50", "1"));
-        items.add(new Item("LadyFinger", R.drawable.ladyfinger, "60", "1"));
-        items.add(new Item("Corn", R.drawable.corn, "45", "1 Kg"));
+        items.add(new Item("Potatoes", R.drawable.potatos, "20", "1", "Kgs"));
+        items.add(new Item("Capsicum", R.drawable.capsicum, "40", "1", "Kgs"));
+        items.add(new Item("Aubergines", R.drawable.brinjal, "50", "1", "Kgs"));
+        items.add(new Item("LadyFinger", R.drawable.ladyfinger, "60", "1", "Kgs"));
+        items.add(new Item("Corn", R.drawable.corn, "45", "1 Kg", "Kgs"));
 
         return items;
     }

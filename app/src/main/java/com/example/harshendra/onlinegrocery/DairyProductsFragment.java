@@ -43,10 +43,10 @@ public class DairyProductsFragment extends Fragment {
     private ArrayList getData() {
 
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("Milk", R.drawable.milk2, "50", "1"));
-        items.add(new Item("Cheese", R.drawable.cheese, "12", "1"));
-        items.add(new Item("Butter", R.drawable.butter, "80", "1"));
-        items.add(new Item("Cake", R.drawable.cake, "350", "1"));
+        items.add(new Item("Milk", R.drawable.milk2, "50", "1", "Litre"));
+        items.add(new Item("Cheese", R.drawable.cheese, "12", "1", "Cubes"));
+        items.add(new Item("Butter", R.drawable.butter, "80", "1", "Kgs"));
+        items.add(new Item("Cake", R.drawable.cake, "700", "1", "Kgs"));
 
         return items;
     }

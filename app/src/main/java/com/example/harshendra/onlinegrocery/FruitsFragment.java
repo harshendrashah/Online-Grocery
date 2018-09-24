@@ -43,10 +43,10 @@ public class FruitsFragment extends Fragment {
     private ArrayList getData() {
 
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("Apple", R.drawable.apples, "20", "1"));
-        items.add(new Item("Banana", R.drawable.banana, "4", "1"));
-        items.add(new Item("Pear", R.drawable.pear, "40", "1"));
-        items.add(new Item("Watermelon", R.drawable.watermelon, "60", "1"));
+        items.add(new Item("Apple", R.drawable.apples, "20", "1", "Kgs"));
+        items.add(new Item("Banana", R.drawable.banana, "4", "1", "Pieces"));
+        items.add(new Item("Pear", R.drawable.pear, "40", "1", "Kgs"));
+        items.add(new Item("Watermelon", R.drawable.watermelon, "60", "1", "Kgs"));
 
         return items;
     }

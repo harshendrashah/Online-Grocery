@@ -6,16 +6,18 @@ public class Item {
     private int imageId;
     private String price;
     private String quantity;
+    private String quantityType;
 
     public Item(){
 
     }
 
-    public Item(String name, int image, String price, String quantity) {
+    public Item(String name, int image, String price, String quantity, String quantityType) {
         this.name = name;
         this.imageId = image;
         this.price = price;
         this.quantity = quantity;
+        this.quantityType = quantityType;
     }
 
     public String getName() {
@@ -48,5 +50,13 @@ public class Item {
 
     public void setQuantity(String quantity) {
         this.quantity = quantity;
+    }
+
+    public String getQuantityType() {
+        return quantityType;
+    }
+
+    public void setQuantityType(String quantityType) {
+        this.quantityType = quantityType;
     }
 }

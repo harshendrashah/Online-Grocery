@@ -43,9 +43,9 @@ public class BeveragesFragment extends Fragment {
     private ArrayList getData() {
 
         ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("Cold drinks", R.drawable.colddrinks, "45", "1"));
-        items.add(new Item("Burger", R.drawable.burger, "45", "1"));
-        items.add(new Item("Tea", R.drawable.tea, "350", "1"));
+        items.add(new Item("Cold drinks", R.drawable.colddrinks, "45", "1", "Bottle"));
+        items.add(new Item("Burger", R.drawable.burger, "45", "1", "Piece"));
+        items.add(new Item("Tea", R.drawable.tea, "350", "1","Kgs"));
 
         return items;
     }

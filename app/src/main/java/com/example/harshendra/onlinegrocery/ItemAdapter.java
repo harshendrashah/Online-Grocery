@@ -48,11 +48,13 @@ public class ItemAdapter extends BaseAdapter {
         TextView name = view.findViewById(R.id.item_name);
         TextView price = view.findViewById(R.id.item_price);
         TextView quantity = view.findViewById(R.id.item_quantity);
+        TextView quantityType = view.findViewById(R.id.quantity_type);
 
         name.setText(s.getName());
         img.setImageResource(s.getImageId());
         price.setText(s.getPrice());
         quantity.setText(s.getQuantity());
+        quantityType.setText(s.getQuantityType());
 
 //        view.setOnClickListener(new View.OnClickListener() {
 //            @Override
