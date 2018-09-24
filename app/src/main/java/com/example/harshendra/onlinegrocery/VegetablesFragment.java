@@ -7,6 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -14,6 +17,9 @@ import android.view.ViewGroup;
  */
 public class VegetablesFragment extends Fragment {
 
+
+    ItemAdapter adapter;
+    ListView lv;
 
     public VegetablesFragment() {
         // Required empty public constructor
@@ -23,8 +29,27 @@ public class VegetablesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.fragment_vegetables, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vegetables, container, false);
+        lv = rootView.findViewById(R.id.listView);
+        adapter = new ItemAdapter(getContext(), getData());
+        lv.setAdapter(adapter);
+
+        return rootView;
+    }
+
+
+    private ArrayList getData() {
+
+        ArrayList<Item> items = new ArrayList<>();
+        items.add(new Item("Potatoes", R.drawable.potatos, "20", "1"));
+        items.add(new Item("Capsicum", R.drawable.capsicum, "40", "1"));
+        items.add(new Item("Aubergines", R.drawable.brinjal, "50", "1"));
+        items.add(new Item("LadyFinger", R.drawable.ladyfinger, "60", "1"));
+        items.add(new Item("Corn", R.drawable.corn, "45", "1 Kg"));
+
+        return items;
     }
 
     @Override

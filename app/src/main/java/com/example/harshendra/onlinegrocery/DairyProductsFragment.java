@@ -7,6 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -14,6 +17,9 @@ import android.view.ViewGroup;
  */
 public class DairyProductsFragment extends Fragment {
 
+
+    ItemAdapter adapter;
+    ListView lv;
 
     public DairyProductsFragment() {
         // Required empty public constructor
@@ -23,8 +29,26 @@ public class DairyProductsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.fragment_offers, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dairy_products, container, false);
+        lv = rootView.findViewById(R.id.listView);
+        adapter = new ItemAdapter(getContext(), getData());
+        lv.setAdapter(adapter);
+
+        return rootView;
+    }
+
+
+    private ArrayList getData() {
+
+        ArrayList<Item> items = new ArrayList<>();
+        items.add(new Item("Milk", R.drawable.milk2, "50", "1"));
+        items.add(new Item("Cheese", R.drawable.cheese, "12", "1"));
+        items.add(new Item("Butter", R.drawable.butter, "80", "1"));
+        items.add(new Item("Cake", R.drawable.cake, "350", "1"));
+
+        return items;
     }
 
     @Override
