@@ -47,7 +47,7 @@ public class VegetablesFragment extends Fragment {
         items.add(new Item("Capsicum", R.drawable.capsicum, "40", "1", "Kgs"));
         items.add(new Item("Aubergines", R.drawable.brinjal, "50", "1", "Kgs"));
         items.add(new Item("LadyFinger", R.drawable.ladyfinger, "60", "1", "Kgs"));
-        items.add(new Item("Corn", R.drawable.corn, "45", "1 Kg", "Kgs"));
+        items.add(new Item("Corn", R.drawable.corn, "45", "1", "Kgs"));
 
         return items;
     }
