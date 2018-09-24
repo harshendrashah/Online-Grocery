@@ -1,13 +1,17 @@
 package com.example.harshendra.onlinegrocery;
 
-public class item {
+public class Item {
 
     private String name;
     private int imageId;
-    private int price;
-    private int quantity;
+    private String price;
+    private String quantity;
 
-    public item(String name, int image, int price, int quantity) {
+    public Item(){
+
+    }
+
+    public Item(String name, int image, String price, String quantity) {
         this.name = name;
         this.imageId = image;
         this.price = price;
@@ -30,19 +34,19 @@ public class item {
         this.imageId = imageId;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 }

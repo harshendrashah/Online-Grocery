@@ -1,6 +1,5 @@
 package com.example.harshendra.onlinegrocery;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,28 +7,27 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class ItemAdapter extends BaseAdapter {
 
     Context c;
-    ArrayList<item> items;
+    ArrayList<Item> Items;
 
-    public ItemAdapter(Context c, ArrayList<item> items) {
+    public ItemAdapter(Context c, ArrayList<Item> items) {
         this.c = c;
-        this.items = items;
+        this.Items = items;
     }
 
     @Override
     public int getCount() {
-        return items.size();
+        return Items.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return items.get(i);
+        return Items.get(i);
     }
 
     @Override
@@ -44,11 +42,11 @@ public class ItemAdapter extends BaseAdapter {
             view= LayoutInflater.from(c).inflate(R.layout.item_card,viewGroup,false);
         }
 
-        final item s= (item) this.getItem(i);
+        final Item s= (Item) this.getItem(i);
 
-        ImageView img= (ImageView) view.findViewById(R.id.item_image);
-        TextView name= (TextView) view.findViewById(R.id.item_name);
-        TextView price = (TextView) view.findViewById(R.id.item_price);
+        ImageView img = view.findViewById(R.id.item_image);
+        TextView name = view.findViewById(R.id.item_name);
+        TextView price = view.findViewById(R.id.item_price);
         TextView quantity = view.findViewById(R.id.item_quantity);
 
         name.setText(s.getName());
